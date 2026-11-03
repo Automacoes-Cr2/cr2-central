@@ -35,7 +35,7 @@ echo.
 echo    Vou conferir quatro coisas e instalar o que faltar:
 echo.
 echo      1. Git para Windows
-echo      2. Python com Tkinter
+echo      2. Python com Tkinter e o PySide6 (a janela nova)
 echo      3. a propria Central
 echo      4. os atalhos que voce escolher
 echo.
@@ -105,6 +105,29 @@ echo        instalado.
 %PY% -c "import tkinter" >nul 2>&1
 if errorlevel 1 goto :sem_tkinter
 echo        ok, com Tkinter.
+
+rem ------------------------------------------------------------
+rem  O PySide6 e a janela nova da Central (src\app_qt.py). Sem
+rem  ele a Central abre a janela antiga, em Tkinter, que faz o
+rem  mesmo com o visual mais feio. Antes de 11/2026 ele so chegava
+rem  "de carona", quando a pessoa abria um programa do catalogo
+rem  feito em Qt - e numa maquina nova a Central abria feia.
+rem  Falhar aqui nao interrompe a instalacao: o central.bat tenta
+rem  de novo e, sem ele, a janela antiga abre do mesmo jeito.
+rem ------------------------------------------------------------
+%PY% -c "import PySide6" >nul 2>&1
+if not errorlevel 1 goto :pyside_ok
+echo        instalando o PySide6 (a janela nova; uns 200 MB, alguns minutos)...
+%PY% -m pip install --disable-pip-version-check --quiet "PySide6>=6.8"
+%PY% -c "import PySide6" >nul 2>&1
+if errorlevel 1 (
+    echo        nao deu para instalar o PySide6 agora. A Central abre na
+    echo        janela antiga e tenta de novo na proxima vez.
+    goto :pyside_fim
+)
+:pyside_ok
+echo        ok, com o PySide6 (janela nova).
+:pyside_fim
 echo.
 
 rem ------------------------------------------------------------

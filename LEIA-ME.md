@@ -5,11 +5,15 @@ atualiza cada uma direto do GitHub — sem baixar `.rar`, sem copiar pasta.
 
 **Abrir:** dois cliques em `central.bat`.
 
-A janela é em Qt (`src/app_qt.py`, precisa do PySide6). Se o PySide6 não estiver
-instalado no computador, o `central.bat` abre a mesma Central em Tkinter
-(`src/app.py`): ela nunca deixa de abrir por falta de biblioteca. O PySide6
-chega sozinho na primeira vez que a pessoa abre um programa do catálogo que
-usa Qt, porque o `.bat` dele instala as dependências.
+A janela é em Qt (`src/app_qt.py`, precisa do PySide6). O `INSTALAR.bat`
+instala o PySide6 junto com o Python, e o `central.bat`, se ele faltar, o
+instala **uma vez** (uns 200 MB) antes de abrir. Se não der (sem internet,
+pip quebrado), abre a mesma Central em Tkinter (`src/app.py`) — ela nunca
+deixa de abrir por falta de biblioteca — e só tenta de novo no dia seguinte
+(a marca fica em `%LOCALAPPDATA%\CR2\central\pyside6-falhou.txt`; apagá-la
+faz tentar já). Até 11/2026 o PySide6 só chegava "de carona", quando a pessoa
+abria um programa do catálogo feito em Qt, e numa máquina nova a Central abria
+na janela antiga.
 
 O `GERAR-EXE.bat` gera um `dist\Central CR2.exe`, que fica **fora do git** e
 **não é usado pelo `central.bat`**: o `.exe` é uma cópia congelada, e o
