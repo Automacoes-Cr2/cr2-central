@@ -478,10 +478,14 @@ class CentralQt(QMainWindow):
                 cartao.mostrar_andamento(True, s["ocupado"], s["pct"], s["texto"])
             else:
                 cartao.mostrar_andamento(False)
-        # cada programa aberto vê, no cabeçalho dele, o andamento dos outros
-        for app_id, s in self.sessoes.items():
+        # cada programa aberto vê, no cabeçalho dele, o andamento dos outros.
+        # Sobre uma CÓPIA: escrever no socket de um programa que acabou de
+        # fechar dispara o disconnected na hora, e o _programa_fechou apaga a
+        # sessão do dicionário no meio deste laço (RuntimeError no erros.log).
+        abertas = list(self.sessoes.items())
+        for app_id, s in abertas:
             outros = []
-            for outro_id, o in self.sessoes.items():
+            for outro_id, o in abertas:
                 if outro_id == app_id or not o["ocupado"]:
                     continue
                 nome = self.cartoes[outro_id].app.nome if outro_id in self.cartoes \
