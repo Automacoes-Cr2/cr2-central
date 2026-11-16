@@ -223,6 +223,13 @@ def conferir_origem(pasta, url):
         raise ErroGit("Esta pasta é um clone de outro repositório:\n\n%s\n\n"
                       "O catálogo espera:\n\n%s"
                       % (atual or "(sem origin)", url))
+    if _limpa(atual) != _limpa(url):
+        # o clone do endereço antigo (antes da organização): passa a apontar
+        # para o novo, que é o mesmo repositório
+        try:
+            rodar(["remote", "set-url", "origin", url], pasta, tempo=20)
+        except ErroGit:
+            pass
 
 
 def endereco_origem(pasta):
@@ -239,10 +246,24 @@ def endereco_origem(pasta):
         return ""
 
 
+# Os repositórios saíram da conta pessoal para a organização em 16/11/2026
+# (para o suporte usar com a própria conta, só leitura). O GitHub redireciona
+# o endereço antigo; o clone feito antes continua sendo o mesmo repositório.
+DONOS_ANTIGOS = {"github.com/migracao-cr2/": "github.com/automacoes-cr2/"}
+
+
+def _limpa(u):
+    u = (u or "").strip().rstrip("/").lower()
+    return u[:-4] if u.endswith(".git") else u
+
+
 def _mesmo_repo(a, b):
-    """Compara endereços ignorando o .git do fim, a barra e maiúsculas."""
+    """Compara endereços ignorando o .git do fim, a barra, maiúsculas e o
+    dono antigo (DONOS_ANTIGOS)."""
     def limpa(u):
-        u = (u or "").strip().rstrip("/").lower()
-        return u[:-4] if u.endswith(".git") else u
+        u = _limpa(u)
+        for antigo, novo in DONOS_ANTIGOS.items():
+            u = u.replace(antigo, novo)
+        return u
     a, b = limpa(a), limpa(b)
     return a != "" and a == b

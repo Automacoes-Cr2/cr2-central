@@ -20,12 +20,12 @@ rem ============================================================
 setlocal EnableExtensions
 title Instalador da Central de Automacoes CR2
 
-set "REPO=https://github.com/migracao-cr2/cr2-central.git"
+set "REPO=https://github.com/Automacoes-Cr2/cr2-central.git"
 set "DEST=%LOCALAPPDATA%\CR2\cr2-central"
 
 rem Um repositorio privado qualquer, so para fazer o login do
 rem GitHub AQUI, num terminal de verdade. Ver a secao do login.
-set "REPO_PRIVADO=https://github.com/migracao-cr2/gestor-licitacoes.git"
+set "REPO_PRIVADO=https://github.com/Automacoes-Cr2/gestor-licitacoes.git"
 
 echo.
 echo  ========================================================

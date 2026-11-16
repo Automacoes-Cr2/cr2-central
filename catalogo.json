@@ -7,7 +7,7 @@
       "nome": "Gestor de Licitações",
       "icone": "⚖",
       "descricao": "Lê uma pasta por licitação e gera a planilha do Front, a planilha de contratos e as pastas organizadas.",
-      "repo": "https://github.com/migracao-cr2/gestor-licitacoes.git",
+      "repo": "https://github.com/Automacoes-Cr2/gestor-licitacoes.git",
       "entrada": "licitacoes.bat",
       "tipo": "janela"
     },
@@ -16,7 +16,7 @@
       "nome": "Licitações e Contratos — TCE-PI",
       "icone": "🏛",
       "descricao": "Baixa as licitações e os contratos de qualquer entidade do Piauí direto dos murais do TCE-PI, organiza as pastas no padrão do Gestor V4 e gera as planilhas do Front. \"Importar dados do Portal CR2\" tira da lista o que já está publicado.",
-      "repo": "https://github.com/migracao-cr2/coletor-tce-pi.git",
+      "repo": "https://github.com/Automacoes-Cr2/coletor-tce-pi.git",
       "entrada": "EXECUTAR.bat",
       "tipo": "janela"
     },
@@ -25,7 +25,7 @@
       "nome": "Licitações e Contratos — TCM-PA",
       "icone": "🏛",
       "descricao": "Baixa as licitações e os contratos de qualquer município do Pará direto do Portal da Transparência do TCM-PA, separa prefeitura e câmara, organiza as pastas no padrão do Gestor V4 e gera as planilhas do Front. \"Importar dados do Portal CR2\" tira da lista o que já está publicado.",
-      "repo": "https://github.com/migracao-cr2/coletor-tcm-pa.git",
+      "repo": "https://github.com/Automacoes-Cr2/coletor-tcm-pa.git",
       "entrada": "EXECUTAR.bat",
       "tipo": "janela"
     },
@@ -34,7 +34,7 @@
       "nome": "Licitações e Contratos — TCE-RS",
       "icone": "🏛",
       "descricao": "Baixa as licitações, os contratos e todos os documentos de qualquer prefeitura, câmara ou órgão municipal do Rio Grande do Sul pelos dados abertos do LicitaCon (TCE-RS), confere cada arquivo pelo MD5, organiza as pastas no padrão do Gestor V4 e gera as planilhas do Front. \"Importar dados do Portal CR2\" tira da lista o que já está publicado.",
-      "repo": "https://github.com/migracao-cr2/coletor-tce-rs.git",
+      "repo": "https://github.com/Automacoes-Cr2/coletor-tce-rs.git",
       "entrada": "EXECUTAR.bat",
       "tipo": "janela"
     },
@@ -43,7 +43,7 @@
       "nome": "Licitações e Contratos — TCE-PE",
       "icone": "🏛",
       "descricao": "Baixa as licitações, os contratos e os documentos de qualquer prefeitura, câmara ou órgão municipal de Pernambuco pela API de dados abertos do TCE-PE (a partir de 2023), organiza as pastas no padrão do Gestor V4 e gera as planilhas Front e Docs, com revisão e subida no Google Drive. \"Importar dados do Portal CR2\" tira da lista o que já está publicado.",
-      "repo": "https://github.com/migracao-cr2/coletor-tce-pe.git",
+      "repo": "https://github.com/Automacoes-Cr2/coletor-tce-pe.git",
       "entrada": "EXECUTAR.bat",
       "tipo": "janela"
     },
@@ -52,7 +52,7 @@
       "nome": "Licitações e Contratos — PNCP",
       "icone": "🏛",
       "descricao": "Baixa as licitações, os contratos, os termos aditivos e as atas de registro de preço de qualquer prefeitura ou câmara do Brasil pelo PNCP (Portal Nacional de Contratações Públicas, Lei 14.133), deduz a situação pelos documentos, organiza as pastas e gera as planilhas do Front e da Docs, com revisão antes de subir no Google Drive. \"Importar dados do Portal CR2\" tira da lista o que já está publicado.",
-      "repo": "https://github.com/migracao-cr2/coletor-pncp.git",
+      "repo": "https://github.com/Automacoes-Cr2/coletor-pncp.git",
       "entrada": "EXECUTAR.bat",
       "tipo": "janela"
     },
@@ -61,7 +61,7 @@
       "nome": "Leis e Atos — Planilha e Envio de PDFs",
       "icone": "✉",
       "descricao": "Dois programas numa janela só: gera a planilha de Leis e Atos do Portal CR2 a partir dos PDFs (com OCR), organiza os arquivos por entidade e sobe no Google Drive com os links; e envia PDFs para o e-mail da migração em lotes de até 25 MB, com a label do colaborador.",
-      "repo": "https://github.com/migracao-cr2/envio-pdfs-email.git",
+      "repo": "https://github.com/Automacoes-Cr2/envio-pdfs-email.git",
       "entrada": "Enviar PDFs.bat",
       "tipo": "janela"
     },
@@ -70,7 +70,7 @@
       "nome": "Migrador de Acervo de Notícias",
       "icone": "📰",
       "descricao": "Lê o backup de um site antigo e migra o acervo de notícias para o WordPress novo, com as mídias e as categorias.",
-      "repo": "https://github.com/migracao-cr2/migrador-acervo-noticias.git",
+      "repo": "https://github.com/Automacoes-Cr2/migrador-acervo-noticias.git",
       "entrada": "migrador.bat",
       "tipo": "janela"
     },
@@ -79,7 +79,7 @@
       "nome": "Painel de Convênios TransfereGOV",
       "icone": "🤝",
       "descricao": "Pergunta o estado e o município e mostra os convênios dele a partir dos dados abertos do TransfereGOV, com filtros por ano, órgão, tipo e situação. Exporta a planilha do que está na tela, e junto a de repasses.",
-      "repo": "https://github.com/migracao-cr2/convenios-transferegov.git",
+      "repo": "https://github.com/Automacoes-Cr2/convenios-transferegov.git",
       "entrada": "painel.bat",
       "tipo": "janela"
     },
@@ -88,7 +88,7 @@
       "nome": "Gerador de Planilha de Emendas Parlamentares",
       "icone": "💰",
       "descricao": "Você informa o município, a UF e o período; ele busca as emendas no Portal da Transparência federal e gera a planilha com as 36 colunas do modelo, em .csv e .xlsx. Tem também a tela de preenchimento manual no Portal CR2, com botão de copiar campo por campo.",
-      "repo": "https://github.com/migracao-cr2/publicador-emendas.git",
+      "repo": "https://github.com/Automacoes-Cr2/publicador-emendas.git",
       "entrada": "emendas.bat",
       "tipo": "janela"
     },
@@ -97,7 +97,7 @@
       "nome": "Programa de Obras",
       "icone": "🏗",
       "descricao": "Você escolhe o município, o portal e os anos; ele busca as obras na fonte pública do tribunal de contas e mostra cada uma já dividida nas telas do Portal CR2, com um botão de copiar em cada campo. Não publica e não guarda senha: quem cola é você. Estados: Pará (GeoObras do TCM-PA), Mato Grosso (Geo-Obras do TCE-MT, com medições e aditivos), Tocantins (SICAP-LCO do TCE-TO), Pernambuco (TCE-PE, obras de 2025 em diante) e Paraná (PIT do TCE-PR, contrato ligado pelo valor, para conferir).",
-      "repo": "https://github.com/migracao-cr2/programa-de-obras.git",
+      "repo": "https://github.com/Automacoes-Cr2/programa-de-obras.git",
       "entrada": "obras.bat",
       "tipo": "janela"
     },
@@ -106,7 +106,7 @@
       "nome": "Pareceres Prévios",
       "icone": "📜",
       "descricao": "Você escolhe o estado e o município; ele baixa do tribunal de contas o parecer prévio das contas da prefeitura e o acórdão das contas da câmara, um PDF por exercício, e gera a planilha-índice com número, data e resultado. Tribunais: TCE-AM, TCE-MG, TCE-MS, TCE-PE, TCE-PI, TCE-PR, TCE-RJ, TCE-SC e TCE-SP.",
-      "repo": "https://github.com/migracao-cr2/coletor-pareceres.git",
+      "repo": "https://github.com/Automacoes-Cr2/coletor-pareceres.git",
       "entrada": "EXECUTAR.bat",
       "tipo": "janela"
     },
@@ -115,7 +115,7 @@
       "nome": "Siconfi — Entregas e Demonstrativos",
       "icone": "📊",
       "descricao": "Você escolhe o estado e o município; ele mostra o que a prefeitura e a câmara já entregaram ao Tesouro no Siconfi (RREO, RGF, DCA e MSC) e o que está atrasado pelo prazo legal — para cobrar pendências. Também gera os relatórios em PDF, no modelo do Siconfi — RREO, RGF e DCA da prefeitura e RGF da câmara —, de vários anos e períodos de uma vez, com os números oficiais.",
-      "repo": "https://github.com/migracao-cr2/painel-siconfi.git",
+      "repo": "https://github.com/Automacoes-Cr2/painel-siconfi.git",
       "entrada": "EXECUTAR.bat",
       "tipo": "janela"
     }

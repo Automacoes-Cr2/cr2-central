@@ -119,12 +119,12 @@ aceitar.
 Primeiro pegue o instalador. Como este repositório é público, não precisa
 de login nem de git para isso — vale qualquer um dos dois:
 
-- abra [INSTALAR.bat](https://github.com/migracao-cr2/cr2-central/blob/main/INSTALAR.bat)
+- abra [INSTALAR.bat](https://github.com/Automacoes-Cr2/cr2-central/blob/main/INSTALAR.bat)
   no GitHub e clique em **Download raw file**;
 - ou cole isto num Prompt de Comando (o `curl` já vem no Windows):
 
 ```
-curl -L -o "%USERPROFILE%\Downloads\INSTALAR.bat" https://raw.githubusercontent.com/migracao-cr2/cr2-central/main/INSTALAR.bat
+curl -L -o "%USERPROFILE%\Downloads\INSTALAR.bat" https://raw.githubusercontent.com/Automacoes-Cr2/cr2-central/main/INSTALAR.bat
 ```
 
 **Depois, dois cliques em `INSTALAR.bat`.** Ele confere o que falta, instala pelo
@@ -141,7 +141,7 @@ Se preferir fazer à mão, são três passos:
 3. Clone a Central e dê dois cliques em `central.bat`:
 
 ```
-git clone https://github.com/migracao-cr2/cr2-central.git
+git clone https://github.com/Automacoes-Cr2/cr2-central.git
 ```
 
 **Este repositório é público, então o clone não pede login nenhum.** As
@@ -158,6 +158,25 @@ arquivo** — quem guarda é o Credential Manager do Windows.
 Quem não trabalha na CR2 consegue clonar e abrir a Central, mas os cartões
 não instalam: os repositórios das automações continuam privados e o GitHub
 responde *"Repositório não encontrado"*.
+
+### Dar acesso a alguém (o suporte)
+
+Os repositórios ficam na organização
+[Automacoes-Cr2](https://github.com/Automacoes-Cr2) (desde 16/11/2026; antes
+eram da conta pessoal `migracao-cr2`, e o GitHub redireciona o endereço
+antigo). Cada pessoa usa a **própria conta** do GitHub:
+
+1. Em **Automacoes-Cr2 ▸ People ▸ Invite member**, convide a conta dela na
+   equipe **Suporte**. A equipe só **lê** os repositórios: instala, atualiza
+   e usa, mas não envia mudança nenhuma.
+2. Ela aceita o convite (chega por e-mail e em github.com/Automacoes-Cr2).
+3. Na máquina dela, o `INSTALAR.bat` faz o login do GitHub: com a conta
+   **dela**, não a da migração.
+
+A permissão padrão da organização é **nenhuma**: o acesso vem só da equipe.
+Repositório novo do catálogo precisa entrar na equipe Suporte (Settings ▸
+Collaborators and teams ▸ Add teams ▸ Suporte, Read), senão o cartão dele
+mostra "Repositório não encontrado" para o suporte.
 
 ### O que o INSTALAR.bat resolve que não é óbvio
 
@@ -188,7 +207,7 @@ Uma entrada em `catalogo.json` e um push. Só isso.
   "nome": "Nome que aparece na tela",
   "descricao": "Uma linha explicando para que serve.",
   "icone": "📦",
-  "repo": "https://github.com/migracao-cr2/nome-do-repositorio.git",
+  "repo": "https://github.com/Automacoes-Cr2/nome-do-repositorio.git",
   "entrada": "programa.bat",
   "tipo": "janela"
 }
