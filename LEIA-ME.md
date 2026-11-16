@@ -213,6 +213,19 @@ Uma entrada em `catalogo.json` e um push. Só isso.
 }
 ```
 
+**Antes do push, decida se o suporte vai usar a automação nova.** O
+repositório é criado na organização Automacoes-Cr2, mas a equipe Suporte
+**não** recebe acesso sozinha (a permissão padrão é "nenhuma"). Se for para o
+suporte: Settings ▸ Collaborators and teams ▸ Add teams ▸ **Suporte**,
+**Read**. Pela linha de comando:
+
+```
+gh api -X PUT orgs/Automacoes-Cr2/teams/suporte/repos/Automacoes-Cr2/nome-do-repositorio -f permission=pull
+```
+
+Se não for, o cartão dela aparece para o suporte, mas o Instalar responde
+"Repositório não encontrado".
+
 ### O logo
 
 `logo.ico` (raiz) e `src/logo.png` são o emblema azul da CR2: o `.ico` vai no
